@@ -1,0 +1,57 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Last Name</ion-label>
+            <ion-input type="text" [(ngModel)]="user.last_name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Perfil</ion-label>
+            <ion-select [(ngModel)]="profileIdSelected">
+              <ion-option *ngFor="let item of profiles" [value]="item.profileId">
+                {{ item.type }}
+              </ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-row>
+            <ion-col center text-center>
+              <button ion-button full color="lightText" (click)="onSubmit()">Sig nup</button>
+            </ion-col>
+        </ion-row>
+        
+        </ion-list>
+        
+</ion-content>
